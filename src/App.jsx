@@ -24,7 +24,14 @@ export default function App() {
         <main className="main-content">
           <Routes>
             {/* Public */}
-            <Route path="/" element={<VolunteerForm />} />
+            <Route
+              path="/"
+              element={
+                <GuestRoute>
+                  <VolunteerForm />
+                </GuestRoute>
+              }
+            />
 
             {/* Volunteer Auth */}
             <Route
